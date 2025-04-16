@@ -1,0 +1,338 @@
+/* HOMEPAGE */
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    width: auto;
+    height: auto;
+    background-color: #3F1847;
+}
+
+.top-wrapper {
+    width: 98%;
+    height: auto;
+    margin: 40px 40px 40px 40px;
+}
+
+.top-container {
+    width: 100%;
+    height: 900px;
+}
+
+.top-left , .top-right {
+    width: 49%;
+    height: auto;
+    float: left;
+}
+
+.top-container .top-left .logo {
+    width: 70%;
+    height: auto;
+    align-items: center;
+    background-color: #B29176;
+    border-radius: 36px;
+    padding: 80px 80px 80px 80px;
+}
+
+
+.top-container .top-right .images {
+    width: 90%;
+    height: auto;
+    float: right;
+    margin-left: 40px;
+    background-image: url(images/big-star.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.tagline {
+    width: 48%;
+    font-family: barlow, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 45px;
+    color: #DFC594;
+    float: right;
+}
+
+.coffeecupone {
+    width: 60%;
+    height: auto;
+    float: left;
+}
+
+.bottom-container {
+    width: 100%;
+    height: auto;
+    background-color: #F0E2BF;
+    border-radius: 36px;
+    text-align: center;
+}
+
+.circle-container {
+    display: inline-block;
+    width: 250px;
+    height: 250px; 
+    margin: auto;
+    vertical-align: top;
+}
+
+.circle {
+    width: 40%;
+    height: 40%;
+    margin: 20px auto;
+    border-radius: 100%;
+    background-color: #82565D;
+    padding: 40px 40px 40px 40px;
+}
+
+.circle-text {
+    text-align: center;
+    font-family: barlow, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #3F1847;
+}
+
+.zodiac-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+.footer {
+    width: 100%;
+    height: 50px;
+}  
+
+/* END HOMEPAGE */
+
+/* INTERIOR PAGES */
+
+.body-interior {
+    background-color: #F0E2BF;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.top-interior {
+    width: 99%;
+    height: auto;
+}
+
+.left-interior {
+    width: 49%;
+    height: 899px;
+    background-image: url(images/steam.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+}
+
+.right-interior {
+    width: 49%;
+    height: 899px;
+    float: left;
+}
+
+
+.illustration {
+    width: 700px;
+    height: 700px;
+    object-fit: contain;
+}
+
+.interior-title {
+    font-family: barlow, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 90px;
+    line-height: 90px;
+    color: #B29176;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.interior-body-text {
+    font-family: barlow, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 27px;
+    color: #6F3D45;
+    width: 528px;
+}
+
+.back-button {
+    font-family: barlow, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    color: #B29176;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* HOMEPAGE HOVER EFFECTS */
+.circle {
+    background-color: #82565D;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .circle-container a:hover .circle {
+    background-color: #B29176;
+    transform: rotate(720deg);
+  }
+
+  .coffeecupone {
+  animation: float 3s ease-in-out infinite;
+}
+  
+  /* INTERIOR PAGE FLOATING ILLUSTRATION */
+  .illustration {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* === INTERIOR PAGE POP-UP ENTRANCE === */
+  .left-interior, .illustration {
+    animation: popUp 0.8s ease-out forwards;
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  
+  @keyframes popUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* === TABLET FORMATTING (Max-width 1000px) === */
+@media screen and (max-width: 1000px) {
+
+    /* HOMEPAGE adjustments */
+    .top-wrapper {
+      margin: 20px 20px 20px 20px;
+    }
+  
+    .top-container {
+      width: 98%;
+      height: auto;
+      overflow: hidden;
+    }
+  
+    .top-left,
+    .top-right {
+      width: 100%;
+      float: none;
+      text-align: center;
+      margin-top: 100px;
+    }
+  
+    .top-left .logo {
+      width: 80%;
+      margin: 0 auto;
+      padding: 40px;
+    }
+  
+    .top-right .images {
+      width: 90%;
+      margin: 0 auto;
+      background-position: center;
+      background-size: contain;
+    }
+  
+    .coffeecupone {
+      width: 50%;
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .tagline {
+      font-size: 34px;
+      width: 98%;
+      text-align: center;
+      float: left;
+    }
+  
+    .bottom-container {
+      padding: 40px 10px;
+      text-align: center;
+    }
+  
+    .circle-container {
+      width: 28%;
+      height: auto;
+      margin: 20px 1%;
+      display: inline-block;
+    }
+  
+    .circle {
+      width: 140px;
+      height: 140px;
+      padding: 20px;
+    }
+  
+    .circle-text {
+      font-size: 13px;
+      letter-spacing: 3px;
+    }
+
+    .footer {
+      width: 100%;
+      height: 100px;  
+    }
+  
+    /* INTERIOR PAGES adjustments */
+
+    .body-interior {
+        overflow: scroll;
+    }
+
+    .top-interior {
+      width: 95%;
+      height: auto;
+      margin: 50px 70px 70px 70px;
+    }
+  
+    .left-interior,
+    .right-interior {
+      width: 98%;
+      height: auto;
+    }
+  
+    .illustration {
+      width: 600px;
+      height: 600px;
+    }
+  
+    .interior-title {
+      font-size: 50px;
+      line-height: 60px;
+      margin-top: 30px;
+      text-align: left;
+    }
+  
+    .interior-body-text {
+      font-size: 14px;
+      line-height: 32px;
+      width: 90%;
+      text-align: left;
+    }
+  
+    .back-button {
+      font-size: 35px;
+      text-align: left;
+    }
+  }
+  
